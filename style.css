@@ -1,29 +1,133 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+  color: #111;
+}
+
 main {
-  margin-top: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
 }
 
 main h1 {
-  margin: 0 10px;
+  margin: 0 0 36px;
   text-align: center;
   font-family: "Amatic SC", cursive;
-  font-size: 65px;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+main h2,
+main h3 {
+  font-family: "Special Elite", cursive;
 }
 
 main h2 {
-  margin: 18px 0 12px 0;
+  margin: 24px 0 18px;
   border-bottom: 1px solid #5c4f41;
-  font-family: "Special Elite", cursive;
-  font-size: 24px;
+  font-size: 2.2rem;
 }
 
 main h3 {
-  margin: 18px 0 12px 0;
+  margin: 18px 0 12px;
   border-bottom: 1px solid #5c4f41;
-  font-family: "Special Elite", cursive;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 main p {
-  font-family: "Roboto", sans-serif;
-  margin-top: 0;
+  margin: 0 0 16px;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.two-column-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.left-column,
+.right-column {
+  flex: 1 1 320px;
+}
+
+.left-column {
+  min-width: 280px;
+  max-width: 480px;
+}
+
+.right-column {
+  min-width: 300px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feature-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #222;
+}
+
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0 0 20px;
+}
+
+.small-row img {
+  height: 180px;
+}
+
+@media (max-width: 1024px) {
+  .two-column-row {
+    flex-direction: column;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  main {
+    padding: 16px;
+  }
+
+  main h1 {
+    font-size: 3rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-row {
+    grid-template-columns: 1fr 1fr;
+  }
 }
